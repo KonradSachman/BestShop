@@ -1,7 +1,7 @@
 :root {
     --main-color--primary: rgba(8, 166, 228, 1); /*blue*/
-    --main-color-secondary: rgba(7, 172, 230, 1); /*second blue*/
-    --main-color-secondary-opacity: rgba(7, 172, 230, 0.16); /*second bleu with opacity*/
+    --main-color-secondary: rgb(7, 172, 230); /*second blue*/
+    --main-color-secondary-opacity: rgba(7, 172, 230, 0.16); /*second blue with opacity*/
     --second-color--primary: rgba(251, 59, 100, 1); /*red*/
     --second-color-secondary: rgba(235, 71, 110, 1); /*second red*/
     --third-color-primary: rgba(85, 223, 180, 1); /*green*/
@@ -212,7 +212,7 @@ font-family: 'Raleway', sans-serif;
     top: calc((63px - 48px)/2);
 }
 
-/*STATS COLOUMNS TEXT
+/*STATS COLUMNS TEXT
  */
 
 .stats__column__heading {
@@ -396,7 +396,7 @@ font-family: 'Raleway', sans-serif;
 .block__third__underline {
     border: 2px solid var(--third-color-primary);
     width: 328px;
-    background:  var(--third-color-primary);w
+    background:  var(--third-color-primary);
 }
 
 /*BLOCK THIRD RIGHT SIDE
@@ -426,13 +426,16 @@ font-family: 'Raleway', sans-serif;
     font-size: 36px;
     line-height: 42px;
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 71px;
 }
+
+/*CARTS GENERAL STYLE
+ */
 
 .carts {
     display: flex;
-    justify-content: center;
-    gap: 58.5px;
+    justify-content: space-between;
+    /*gap: 58.5px;*/
 }
 
 .cart {
@@ -441,37 +444,39 @@ font-family: 'Raleway', sans-serif;
     align-items: center;
     width: 372px;
     height: 461px;
-    border: 1px solid deeppink;
+    border: 1px solid yellow;
     border-radius: 18px;
 }
 
 .cart__heading {
     padding-top: 34px;
-    padding-bottom: 14px;
+    /*padding-bottom: 14px;*/
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 20px;
-    /*line-height: 1px;*/
+    /*line-height: 1px;  błąd w XD ?? */
     color: var(--main-text-color-secondary);
 }
 
 .cart__price {
     font-weight: 300;
     font-size: 46px;
-    /*line-height: 2px;*/
+    line-height: 64px;
+    /*line-height: 2px; błąd w XD ?? */
     padding-top: 14px;
-    padding-bottom: 5px;
-    width: 85px;
-    height: 64px;
+    padding-bottom: 15px;
+    /*width: 85px;*/
+    /*height: 64px;*/
 }
 
 .limited__offer {
-    padding-top: 5px;
-    padding-bottom: 50px;
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 12px;
+    line-height: 14px;
     color: var(--main-text-color-secondary);
+    /*padding-top: 5px;*/
+    padding-bottom: 50px;
 }
 
 .cart__left .limited__offer {
@@ -481,9 +486,109 @@ font-family: 'Raleway', sans-serif;
 .cart_list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    /*line-height: 41px;*/
+    gap: 25px;
+    font-size: 14px;
 }
 
 .cart__button {
-    padding-top: 55px;
+    width: 150px;
+    /*margin-top: 80px;*/
+    transform: translate(0, 55px);
+    border-radius: 23px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 3.5;
+    height: 50px;
+    text-align: center;
+    color: var(--button-text-color);
+    background: #55DFB4;
+}
+
+/*CARTS DIFFERENT COLOR STYLING
+ */
+
+.cart__left {
+    border: 1px solid var(--second-color--primary);
+}
+.cart__left .cart__price {
+    color: var(--second-color--primary);
+}
+
+.cart__left .cart__button {
+    background: var(--second-color-secondary);
+}
+
+.cart__middle {
+    border: 1px solid var(--main-color-secondary);
+}
+
+.cart__middle .cart__price {
+    color: var(--main-color-secondary);
+}
+
+.cart__middle .cart__button {
+    background: var(--main-color-secondary);
+}
+
+.cart__right {
+    border: 1px solid var(--third-color-primary);
+}
+
+.cart__right .cart__price {
+    color: var(--third-color-primary);
+}
+
+.cart__right .cart__button {
+    background: var(--third-color-primary);
+}
+
+/*SMALL ICONS
+ */
+
+.check:before {
+    content: "";
+    background-image: url("../assets/chechmarklist-1.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 11px;
+    height: 11px;
+    padding: 6px;
+    margin-right: 10px;
+}
+
+.notincluded:before {
+    content: "";
+    background-image: url("../assets/Close.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 11px;
+    height: 11px;
+    padding: 6px;
+    margin-right: 10px;
+}
+
+/*SPECIAL STYLING - MIDDLE CART
+ */
+
+.cart__middle {
+    width: 405px;
+    height: 500px;
+    transform: translate(0, -19.5px);
+    box-shadow: 5px 10px 27px var(--main-color-secondary-opacity);
+}
+
+.cart__middle .cart__heading {
+    font-size: 21px;
+}
+
+.cart__middle .cart__button {
+    width: 165px;
+    transform: translate(0, 95px);
+    line-height: 3.5;
+    box-shadow: 5px 10px 14px var(--main-color-secondary-opacity);
 }
