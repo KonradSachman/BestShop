@@ -1,5 +1,5 @@
 :root {
-    --main-color--primary: rgba(8, 166, 228, 1); /*blue*/
+    --main-color--primary: rgb(8, 166, 228); /*blue*/
     --main-color-secondary: rgb(7, 172, 230); /*second blue*/
     --main-color-secondary-opacity: rgba(7, 172, 230, 0.16); /*second blue with opacity*/
     --second-color--primary: rgba(251, 59, 100, 1); /*red*/
@@ -7,12 +7,14 @@
     --third-color-primary: rgba(85, 223, 180, 1); /*green*/
 
     --main-background-color: white;
-    --second-background-color: rgba(247, 247, 247, 1);
+    --second-background-color: rgb(247, 247, 247);
+
+    --box-shadow-color: rgba(0, 0, 0, 0.16);
 
     --main-text-color-primary: rgba(0, 0, 0, 1); /*black*/
     --main-text-color-secondary: rgba(19, 37, 59, 1); /* second black*/
-    --second-text-color-primary: rgba(165, 165, 165, 1); /*gray*/
-    --second-text-color-secondary: rgba(112, 112, 112, 1); /*second gray*/
+    --second-text-color-primary: rgb(165, 165, 165); /*gray*/
+    --second-text-color-secondary: rgb(112, 112, 112); /*second gray*/
 
     --button-text-color: white;
 
@@ -98,6 +100,11 @@ font-family: 'Raleway', sans-serif;
     color: var(--main-text-color-primary);
 }
 
+.nav__btn:focus {
+    outline: none;
+    border-bottom: 4px solid var(--main-color--primary);
+    color: var(--main-text-color-primary);
+}
 /*HERO
  */
 
@@ -137,6 +144,10 @@ font-family: 'Raleway', sans-serif;
     font-weight: 700;
     color: var(--button-text-color);
     padding: 22px 157px 23px;
+}
+
+.heading__btn:focus {
+    outline: 1px dotted var(--second-text-color-secondary);
 }
 
 /*MAIN
@@ -507,6 +518,10 @@ font-family: 'Raleway', sans-serif;
     background: #55DFB4;
 }
 
+.cart__button:focus {
+    outline: 1px dotted var(--second-text-color-secondary);
+}
+
 /*CARTS DIFFERENT COLOR STYLING
  */
 
@@ -592,3 +607,204 @@ font-family: 'Raleway', sans-serif;
     line-height: 3.5;
     box-shadow: 5px 10px 14px var(--main-color-secondary-opacity);
 }
+
+/*CONTACT
+ */
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 114px;
+    padding-bottom: 60px;
+}
+
+/*CONTACT DETAILS
+ */
+
+.contact__details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__heading {
+    font-family: var(--secondary-font);
+    font-size: 49px;
+    line-height: 57px;
+}
+
+.contact__text {
+    line-height: 22px;
+    padding: 22px 0 40px;
+}
+
+.icons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.icons img  {
+    padding-right: 10px;
+}
+
+.icons p {
+    padding-right: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--second-text-color-primary);
+}
+
+/*CONTACT FORM
+ */
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.contact__form h4 {
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 700;
+    letter-spacing: 3.3px;
+    color: var(--main-color--primary);
+    padding-bottom: 25px;
+}
+
+.contact__name {
+    margin-bottom: 42px;
+}
+
+.contact__email {
+    margin-bottom: 30px;
+}
+
+.contact__form input {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 1px solid rgba(149, 152, 154, 1);
+    /*border: none;*/
+    width: 100%;
+    height: 20px;
+}
+
+.contact__form input:focus {
+    border-color: var(--main-color-secondary);
+    box-shadow: 0 1px 14px var(--main-color-secondary-opacity);
+}
+
+/*CHECKBOX
+ */
+
+.contact__checkbox {
+    display: flex;
+    position: relative;
+}
+
+.check__img {
+    min-width: 24px;
+    height: 24px;
+    border: 1px solid rgba(149, 152, 154, 1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check__img img {
+    width: 12px;
+    height: 11px;
+    display: inline-block;
+    opacity: 0;
+}
+.contact__checkbox input {  /* REMEBER TO MOVE IT TO LEFT OR SO, UNDER CHECKBOX IS GOIN TO BE BUTTON */
+   opacity: 0;
+    position: absolute;
+    top: 35px;
+    left: -186px;
+}
+
+.form__checkbox {
+    display: flex;
+    gap: 10px;
+}
+
+.form__checkbox p {
+    font-size: 12px;
+    line-height: 17px;
+    color: var(--second-text-color-secondary);
+}
+
+input:checked ~ .form__checkbox .check__img img{
+    opacity: 1;
+}
+
+input:focus ~ .form__checkbox .check__img {
+    border-color: var(--main-color--primary);
+    box-shadow: inset 0 0 3px var(--main-color-secondary);
+    /*box-shadow: 5px 10px 14px var(--main-color-secondary-opacity);*/
+}
+
+.contact__button {
+    background: var(--main-color--primary);
+    box-shadow: 5px 10px 14px var(--main-color-secondary-opacity);
+    border-radius: 35px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.btn__send {
+    width: 226px;
+    padding: 20px 97px;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 4;
+    font-weight: 700;
+    color: var(--button-text-color);
+}
+
+.btn__send:focus {
+    outline: 1px dotted var(--second-text-color-secondary);
+}
+
+/*FOOTER
+ */
+
+.footer {
+    background: var(--second-background-color);
+    box-shadow: 0px -5px 40px var(--box-shadow-color);
+}
+
+.footer__margin__padding {
+    margin: 0 136px;
+    padding: 21px 0 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__logo {
+    font-family: var(--secondary-font);
+    color: var(--main-color--primary);
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.footer__logo__goup {
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 11px;
+    line-height: 15px;
+    color: var(--second-text-color-primary);
+}
+
+.footer__sicon {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
