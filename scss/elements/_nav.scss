@@ -1,0 +1,124 @@
+.header {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  margin-bottom: 100px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__logo {
+  color: $color-main--primary;
+  font-family: $raleway;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 37px;
+  padding: 16px 0 17px 25px;
+}
+.nav input:checked ~ .dropdown_menu {
+  display: block;
+}
+.nav input:checked ~ .label__checkicon span {
+  transform: rotate(45deg);
+}
+.nav input:checked ~ .label__checkicon span:before
+{
+  transform: rotate(-90deg);
+  top: 0;
+  right: 0;
+}
+.nav input:checked ~ .label__checkicon span:after {
+  display: none;
+}
+.nav input {
+  margin-top: -100px;
+  opacity: 0;
+}
+.dropdown__menu__btn {
+  //margin-right: 30px;
+  height: 2px;
+  width: 20px;
+  background: $color-main--primary;
+  position: absolute;
+  top: 29px;
+  right: 30px;
+}
+.dropdown__menu__btn:before {
+  content: "";
+  height: 2px;
+  width: 20px;
+  background: $color-main--primary;
+  position: absolute;
+  top: -5px;
+  right: 0;
+}
+.dropdown__menu__btn:after {
+  content: "";
+  height: 2px;
+  width: 20px;
+  background: $color-main--primary;
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+.dropdown_menu {
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  padding: 30px 0 37px 40px;
+  background: $background-main-color;
+  display: none;
+  position: absolute;
+  top: 77px;
+  right: 0;
+}
+.nav__btn {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $textcolor-second--primary;
+  display: inline-block;
+}
+.menu__list li:not(:first-child) {
+  padding: 14px 0 0;
+}
+.nav__btn:hover {
+  color: $textcolor-main--primary;
+}
+
+@media (min-width: 1000px) {
+  .label__checkicon {
+    display: none;
+  }
+  .dropdown_menu {
+    display: block;
+    position: initial;
+    padding: 0;
+    box-shadow: none;
+  }
+  .nav {
+    align-items: center;
+  }
+  .menu__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    li {
+      border-bottom: 3px solid transparent;
+      padding: 28px 0;
+      &:not(:first-child) {
+        padding: 28px 0;
+      }
+      &:not(:last-child) {
+        margin-right: 55px;
+      }
+      &:hover {
+        border-bottom-color: $color-main--primary;
+      }
+      .nav__btn {
+        padding: 0 12px;
+      }
+    }
+  }
+}

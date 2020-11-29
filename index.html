@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Best Shop</title>
-    <link rel="stylesheet" href="style/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <header class="header">
     <div class="container">
         <nav class="nav">
-
             <div class="nav__logo">BestShop</div>
-            <ul class="nav__list">
-                <li><a class="nav__btn hover__style" href="#id__stats">why us</a></li>
-                <li><a class="nav__btn hover__style" href="#id__benefits">benefits</a></li>
-                <li><a class="nav__btn hover__style" href="#id__pricing">prices</a></li>
-                <li><a class="nav__btn hover__style" href="#id__contact">contact</a></li>
-            </ul>
-
-        </nav>
-    </div>
+            <input type="checkbox" name="checkicon" id="checkicon">
+            <label for="checkicon"  class="label__checkicon" name="checkicon">
+                    <span class="dropdown__menu__btn"></span>
+            </label>
+            <div class="dropdown_menu">
+                <ul class="menu__list">
+                    <li><a class="nav__btn" href="#id__stats">why us</a></li>
+                    <li><a class="nav__btn" href="#id__benefits">benefits</a></li>
+                    <li><a class="nav__btn" href="#id__pricing">prices</a></li>
+                    <li><a class="nav__btn" href="#id__contact">contact</a></li>
+                </ul>
+            </div>
 </header>
 <div class="hero">
     <h1 class="heading">sell more!</h1>
@@ -33,14 +34,11 @@
     <a href="" class="btn heading__btn">Open your shop</a>
     <img class="heading__background" src="assets/Background.png">
 </div>
-
 <main>
-    <div class="container__second">
+    <div class="container">
         <section id="id__stats" class="stats">
-
             <h2 class="stats__heading">The most popular sales platform in country</h2>
             <div class="stats__columns">
-
                 <div class="stats__column column__first">
                     <div class="bkg bkg__first">
                         <img class="stats__column__img__first" src="assets/Person.svg" alt="">
@@ -48,7 +46,6 @@
                     <h3 class="stats__column__heading">100000+</h3>
                     <p class="stats__column__text">daily entries</p>
                 </div>
-
                 <div class="stats__column column__second">
                     <div class="bkg bkg__second">
                         <img class="stats__column__img__second" src="assets/Eye.svg" alt="">
@@ -56,7 +53,6 @@
                     <h3 class="stats__column__heading">2000000+</h3>
                     <p class="stats__column__text">seen products <br> every day</p>
                 </div>
-
                 <div class="stats__column column__third">
                     <div class="bkg bkg__third">
                         <img class="stats__column__img__third" src="assets/Catalog.svg" alt="">
@@ -64,14 +60,11 @@
                     <h3 class="stats__column__heading">10000+</h3>
                     <p class="stats__column__text">added post <br> daily</p>
                 </div>
-
             </div>
-
-
         </section>
     </div>
     <section id="id__benefits" class="benefist">
-        <div class="container__second">
+        <div class="container">
 
             <div class="blocks">
 
@@ -118,7 +111,7 @@
 
         </div>
     </section>
-    <div class="container__third">
+    <div class="container">
         <section id="id__pricing" class="pricing">
 
             <h2 class="pricing__heading">Pricing</h2>
@@ -172,7 +165,7 @@
 
         </section>
     </div>
-    <div class="container__third">
+    <div class="container">
         <section id="id__contact" class="contact">
 
             <div class="contact__details">
@@ -253,8 +246,6 @@
             </div>
         </div>
     </div>
-
-    
 
 
 </footer>

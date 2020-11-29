@@ -1,0 +1,22 @@
+// MAIN COLOR WITH VARIATIONS
+$color-main--primary: rgb(8, 166, 228); /*blue*/
+$color-main--secondary: rgb(7, 172, 230); /*second blue*/
+$color-main--secondary-opacity: rgba(7, 172, 230, 0.16); /*second blue with opacity*/
+// SECOND COLOR WITH VARIATIONS
+$color-second--primary: rgba(251, 59, 100, 1); /*red*/
+$color-second--secondary: rgba(235, 71, 110, 1); /*second red*/
+// THIRD COLOR
+$color-third-primary: rgba(85, 223, 180, 1); /*green*/
+// BACKGROUND COLORS
+$background-main-color: white;
+$background-second-color: rgb(247, 247, 247);
+// BOX SHADOW
+$box-shadow-color: rgba(0, 0, 0, 0.16);
+// TEXT COLORS
+$textcolor-main--primary: rgba(0, 0, 0, 1); /*black*/
+$textcolor-main-secondary: rgba(19, 37, 59, 1); /* second black*/
+$textcolor-main-secondary: rgba(19, 37, 59, 1); /* second black*/
+$textcolor-second--primary: rgb(165, 165, 165); /*gray*/
+$textcolor-second--secondary: rgb(112, 112, 112); /*second gray*/
+// BUTTON TEXT COLOR
+$button-text--color: white;
